@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background-size: cover;
+  background-color: #280003;
+  color: #C2847A;
+  /*transition: background-image 1s ease-in-out;*/
+}
+
+h1, header, footer {
+  display: none;
+}
+
+.slider-control {
+  display: flex;
+  flex-direction: row;
+  width: 100%; 
+  justify-content: space-between;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+ /* width: 18rem; */
+  justify-content: space-between;
+}
