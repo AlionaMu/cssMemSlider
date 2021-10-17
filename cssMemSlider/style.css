@@ -52,6 +52,8 @@ input {
   width: 100%;
   height: auto;
   border-radius: 5%;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
 }
 
 .carousel {
@@ -74,15 +76,19 @@ input {
 
 #img_1:checked ~ .slider__container .img_1 .img {
   margin-left: 0;
+  opacity: 100%;
 }
 #img_2:checked ~ .slider__container .img_2 .img {
   margin-left: -200%;
+  opacity: 100%;
 }
 #img_3:checked ~ .slider__container .img_3 .img {
   margin-left: -400%;
+  opacity: 100%;
 }
 #img_4:checked ~ .slider__container .img_4 .img {
   margin-left: -600%;
+  opacity: 100%;
 }
 
 #img_1:checked ~ .down .mem__wrapper .mem__container .mem_1 .text__content {
@@ -163,6 +169,7 @@ input {
 }
 
 .text__content {
+  transition: opacity 0.3s ease-in-out;
   opacity: 0;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 22px;
