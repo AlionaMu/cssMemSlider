@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -14,23 +18,135 @@ body {
   background-size: cover;
   background-color: #280003;
   color: #C2847A;
-  /*transition: background-image 1s ease-in-out;*/
 }
 
 h1, header, footer {
   display: none;
 }
 
-.slider-control {
+.wrapper {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10% 10% 5%;
+}
+
+input {
+	display: none;
+}
+
+.slider {
   flex-direction: row;
-  width: 100%; 
-  justify-content: space-between;
+  overflow-x: hidden;
+  max-width: 70vw;
+}
+
+.slider__img {
+  border-radius: 5%;
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+}
+
+.img {
+  width: 100%;
+  height: auto;
 }
 
 .carousel {
   display: flex;
   flex-direction: row;
- /* width: 18rem; */
   justify-content: space-between;
+  padding-top: 5%;
+}
+
+.carousel__item {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  background-color: #BAA898;
+  border-radius: 50%;
+  margin-right: 25px;
+}
+.carousel__item:hover {
+  background-color: #EEE0CB;
+}
+.carousel>.active{
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  background-color: unset;
+  border: 1px solid #BAA898;
+  border-radius: 50%;
+}
+.carousel>.active:hover {
+  border: 1px solid #EEE0CB;
+}
+
+#img_1:checked ~ .slider__container .img_1 .img {
+  margin-left: 0;
+  border: 1px solid red ;
+}
+#img_2:checked ~ .slider__container .img_2 .img {
+  margin-left: -200%;
+  border: 1px solid red ;
+}
+#img_3:checked ~ .slider__container .img_3 .img {
+  margin-left: -400%;
+  border: 1px solid red ;
+}
+#img_4:checked ~ .slider__container .img_4 .img {
+  margin-left: -600%;
+  border: 1px solid red ;
+}
+
+#img_1:checked ~ .down .carousel label[for="img_1"] {
+  border: 1px solid red ;
+}
+#img_2:checked ~ .down .carousel label[for="img_2"] {
+  border: 1px solid red ;
+}
+#img_3:checked ~ .down .carousel label[for="img_3"] {
+  border: 1px solid red ;
+}
+#img_4:checked ~ .down .carousel label[for="img_"] {
+  border: 1px solid red ;
+}
+
+.slider__container {
+  display: flex;
+  width: 400%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  animation: none;
+}
+
+@keyframes slidy {
+  20% { left: 0%;}
+  25% {left: -100%;}
+  45% {left: -100%;}
+  50% {left: -200%;}
+  70% {left: -200%;}
+  75% {left: -300%;}
+  95% {left: -300%;}
+  100% {left: -400%;}
+}
+
+.down {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+.mem__container {
+  display: flex;
+  margin-right: 30%;
+  width: 400%;
+}
+
+.mem {
+  width: 100%;
+  height: 100%;
 }

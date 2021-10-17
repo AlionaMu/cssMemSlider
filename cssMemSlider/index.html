@@ -11,21 +11,43 @@
   <header>
     <h1>cssMemSlider</h1>
   </header>
-  <main>
-    <div class="wrapper">
-      <div class="slider">
-        <img src="" alt="funny-pic" class="slider__img">
-      </div>
-      <div class="slider-control">
-        <div class="text"></div>
-        <span class="carousel">
-          <span class="carousel__item carousel_active"></span>
-          <span class="carousel__item"></span>
-          <span class="carousel__item"></span>
-          <span class="carousel__item"></span>
-        </span>
-      </div>
+  <main class="wrapper">
+    <div class="slider">
+        <input type="radio" name="point" id="img_1" checked>
+        <input type="radio" name="point" id="img_2">
+        <input type="radio" name="point" id="img_3">
+        <input type="radio" name="point" id="img_4">
+        <div class="slider__container">
+          <div class="slider__img img_1">
+            <img src="./assets/img/banana.jpg" alt="funny-pic" class="img">
+          </div>
+          <div class="slider__img img_2">
+            <img src="./assets/img/plants.jpg" alt="funny-pic" class="img">
+          </div>
+          <div class="slider__img img_3">
+            <img src="./assets/img/friends.jpg" alt="funny-pic" class="img">
+          </div>
+          <div class="slider__img img_4">
+            <img src="./assets/img/sunrise.png" alt="funny-pic" class="img">
+          </div>
+        </div>
+        <div class="down">
+          <div class="mem__container">
+            <p class="mem mem_1">The older you get, the better you get, unless you’re a banana.</p>
+            <p class="mem mem_2">The older you get, the better you get, unless you’re a banana.</p>
+            <p class="mem mem_3">The older you get, the better you get, unless you’re a banana.</p>
+            <p class="mem mem_4">The older you get, the better you get, unless you’re a banana.</p>
+          </div>
+          <span class="carousel">
+            <label for="img_1" class="carousel__item active"></label>
+            <label for="img_2" class="carousel__item"></label>
+            <label for="img_3" class="carousel__item"></label>
+            <label for="img_4" class="carousel__item"></label>
+          </span>
+        </div>
     </div>
+
+    
   </main>
   <footer></footer>
 </body>
